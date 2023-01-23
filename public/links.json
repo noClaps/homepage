@@ -1,0 +1,155 @@
+{
+    "links": [
+        {
+            "url": "https://blog.zerolimits.dev",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "The Blog of Random",
+            "desc": "A blog about the most random things you can think of, brought to you by the most interesting boring person you've ever met.",
+            "tags": [
+                "",
+                "posts"
+            ]
+        },
+        {
+            "url": "https://blog.zerolimits.dev/science/chaos-theory",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "Chaos Theory",
+            "desc": "How the simplest things can go haywire",
+            "tags": [
+                "posts",
+                "science"
+            ]
+        },
+        {
+            "url": "https://blog.zerolimits.dev/science/collatz-conjecture/",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "Collatz Conjecture",
+            "desc": "The simplest hardest problem in math history",
+            "tags": [
+                "posts",
+                "science"
+            ]
+        },
+        {
+            "url": "https://blog.zerolimits.dev/history/history-of-toilet-paper/",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "History of Toilet Paper",
+            "desc": "The long and quite strange history of toilet paper",
+            "tags": [
+                "posts",
+                "history"
+            ]
+        },
+        {
+            "url": "https://blog.zerolimits.dev/history/the-phalanx-formation/",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "The Phalanx Formation",
+            "desc": "My favorite ancient Greek battle formation",
+            "tags": [
+                "posts",
+                "history"
+            ]
+        },
+        {
+            "url": "https://blog.zerolimits.dev/tech/psa/intro/",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "Intro to Privacy, Security and Anonymity",
+            "desc": "How to protect yourself from the internet, on the internet",
+            "tags": [
+                "posts",
+                "tech",
+                "privacy",
+                "security",
+                "anonymity"
+            ]
+        },
+        {
+            "url": "https://blog.zerolimits.dev/tech/psa/messengers/",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "Messengers",
+            "desc": "The right and wrong places to talk to people",
+            "tags": [
+                "posts",
+                "tech",
+                "privacy",
+                "security",
+                "anonymity"
+            ]
+        },
+        {
+            "url": "https://blog.zerolimits.dev/tech/psa/threat-modelling/",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "Threat Modelling",
+            "desc": "Why are you running?",
+            "tags": [
+                "posts",
+                "tech",
+                "privacy",
+                "security",
+                "anonymity"
+            ]
+        },
+        {
+            "url": "https://blog.zerolimits.dev/tech/google/",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "Google: A Misrepresented Evil",
+            "desc": "Don't be evil, sometimes.",
+            "tags": [
+                "posts",
+                "tech"
+            ]
+        },
+        {
+            "url": "https://blog.zerolimits.dev/tech/be-social/",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "Be Social",
+            "desc": "What's your [enter social media here]?",
+            "tags": [
+                "posts",
+                "tech"
+            ]
+        },
+        {
+            "url": "https://gallery.zerolimits.dev",
+            "favicon": "https://gallery.zerolimits.dev/icon/favicon.svg",
+            "title": "Aperturic Focus",
+            "desc": "A website to showcase some cool photos I've taken.",
+            "tags": [
+                "photos",
+                "pictures",
+                "photography",
+                "pics",
+                "gallery"
+            ]
+        },
+        {
+            "url": "https://recipes.zerolimits.dev",
+            "favicon": "https://recipes.zerolimits.dev/icon/favicon.svg",
+            "title": "Nummy Nummy Num",
+            "desc": "A temporary recipe manager for personal use only",
+            "tags": [
+                "food",
+                "recipes",
+                "cooking"
+            ]
+        },
+        {
+            "url": "https://matrix.to/#/@turbulent:arcticfoxes.net",
+            "title": "Matrix",
+            "tags": [
+                "contact",
+                "social"
+            ]
+        },
+        {
+            "url": "https://github.com/noClaps",
+            "title": "GitHub",
+            "tags": [
+                "source",
+                "code",
+                "repo",
+                "noclaps"
+            ]
+        }
+    ]
+}

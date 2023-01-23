@@ -1,0 +1,37 @@
+body {
+    // Main
+    --bg: #fff;
+    --text: #111;
+    --link: #850;
+    --variant: #eee;
+
+    // Accents
+    --primary-bg: #fdb;
+    --primary-text: #210;
+    --selection-bg: #630;
+    --selection-text: #fdb;
+}
+
+.dark {
+    // Main
+    --bg: #111;
+    --text: #eee;
+    --link: #fb6;
+    --variant: #222;
+
+    // Accents
+    --primary-bg: #630;
+    --primary-text: #fdb;
+    --selection-bg: #fdb;
+    --selection-text: #210;
+}
+
+::selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+::-moz-selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
+}

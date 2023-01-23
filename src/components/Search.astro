@@ -1,0 +1,195 @@
+<div>
+    <input
+        oninput="search()"
+        id="searchBar"
+        type="search"
+        placeholder="Search for anything... (press * to see all)"
+    />
+    <ul id="searchResults"></ul>
+</div>
+
+<style lang="scss">
+    div {
+        width: 100%;
+
+        input {
+            width: 100%;
+            background-color: var(--variant);
+            border: none;
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+            color: var(--text);
+            font-size: 1.25rem;
+            text-align: center;
+            position: relative;
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        ul {
+            display: none;
+            flex-direction: column;
+            gap: 0.5rem;
+            background-color: var(--variant);
+            border-radius: 0.75rem;
+            padding: 0.5rem;
+            position: relative;
+            width: 100%;
+
+            :global(a) {
+                border-radius: 0.5rem;
+                text-decoration: none;
+                color: var(--text);
+                transition: 0.25s;
+                padding: 0 1rem;
+
+                &:hover {
+                    color: var(--primary-text);
+                    background-color: var(--primary-bg);
+                }
+
+                :global(div) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    :global(img) {
+                        display: inline-block;
+                        height: 1.25rem;
+                        margin-right: 0.5rem;
+                        vertical-align: -10%;
+                    }
+                }
+
+                :global(p) {
+                    font-size: 1.25rem;
+                    text-align: center;
+                    margin: 1rem 0;
+
+                    &.desc {
+                        filter: opacity(50%);
+                    }
+                }
+            }
+        }
+    }
+</style>
+
+<script is:inline>
+    async function search() {
+        // Fetch links from links.json file and create array of links.
+        const response = await fetch("/links.json")
+        const jsonlinks = await response.json()
+        const links = jsonlinks["links"]
+
+        var resultsList = document.getElementById("searchResults"); // Results box
+        var indices = [];
+        var input = document.getElementById("searchBar"); // Search bar
+        var query = input.value.toLowerCase(); // Search query in lowercase, to make search case-insensitive
+
+        // This clears the results list every time you press in a character, effectively refreshing with every update to the query.
+        while (resultsList.firstChild) {
+            resultsList.removeChild(resultsList.firstChild);
+        }
+
+        // Goes through tags and finds if any value inside the tags matches the search query.
+        // The tags with higher positions for each get stored in a higher index in the final tags list,
+        // eg. "The Blog of Random" would have a higher position for the "blog" tag than "Messengers",
+        // since TBoR has a higher priority for the "blog" tag (see links.json).
+        function findTags() {
+            tags = [];
+            for (i = 0; i < links.length; i++) {
+                for (j = 0; j < links[i].tags.length; j++) {
+                    if (links[i].tags[j].indexOf(query) > -1) {
+                        tags.push([i, j]);
+                        break;
+                    }
+                }
+            }
+            tags.sort((a, b) => a[1] - b[1]);
+            return tags;
+        }
+
+        if (query == "" || query == " ") {
+            // If query is empty, clear results
+            resultsList.style.display = "none";
+        } else {
+            for (var i = 0; i < links.length; i++) {
+                if (query == "*") {
+                    // If "*" is the query, show all links
+                    indices.push([i, 0]);
+                } else if (links[i].title.toLowerCase().indexOf(query) > -1) {
+                    // Find closest instance of query and give it priority,
+                    // eg. if query is "g", results like "GitHub" will have a higher position than "The Blog of Random",
+                    // since "GitHub" matches the query more than "The Blog of Random"
+                    indices.push([
+                        i,
+                        links[i].title.toLowerCase().indexOf(query),
+                    ]);
+                    indices.sort((a, b) => a[1] - b[1]);
+                } else {
+                    // If none of the results match, clear results.
+                    resultsList.style.display = "none";
+                }
+            }
+
+            // This block comes after so that tags can be added after the titles,
+            // since a matching title should have priority over a matching tag,
+            // eg. if query is "p", titles with "p" in them like "Aperturic Focus"
+            // should show up before results that have tags like "post"
+            var linksDone = [];
+
+            for (index of indices) {
+                linksDone.push(index[0]);
+            }
+
+            for (foundTags of findTags()) {
+                // Skips the result if it's already been covered by the titles search above
+                if (linksDone.includes(foundTags[0])) {
+                    continue;
+                } else {
+                    indices.push([foundTags[0], 99]);
+                }
+            }
+        }
+
+        // Removes duplicates, refer to https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
+        indices = [...new Set(indices)];
+
+        for (index of indices) {
+            const j = index[0]; // Take index in links array
+
+            // Create an element <a href=url><div><img src=favicon><p>title</p></div><p class="desc">desc</p></a> for each result
+            var result = document.createElement("a");
+            var titleblock = document.createElement("div");
+            var title = document.createElement("p");
+            var favicon = links[j].favicon
+                ? document.createElement("img")
+                : null;
+            var desc = links[j].desc ? document.createElement("p") : null;
+
+            resultsList.style.display = "flex";
+            resultsList.append(result);
+            result.href = links[j].url;
+            result.append(titleblock);
+
+            // If desc and favicon are not present, their elements are excluded
+            if (desc != null) {
+                result.append(desc);
+                desc.innerHTML = links[j].desc;
+                desc.classList.add("desc");
+            }
+
+            if (favicon != null) {
+                titleblock.append(favicon);
+                favicon.src = links[j].favicon;
+            }
+
+            titleblock.append(title);
+
+            title.innerHTML = links[j].title;
+        }
+    }
+</script>

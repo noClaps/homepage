@@ -1,0 +1,15 @@
+import { defineConfig } from 'astro/config';
+
+import compress from "astro-compress";
+import critters from "astro-critters";
+import sitemap from "@astrojs/sitemap";
+import robotsTxt from "astro-robots-txt";
+
+// https://astro.build/config
+export default defineConfig({
+  site: "https://zerolimits.dev",
+  experimental: {
+    integrations: true
+  },
+  integrations: [robotsTxt(), sitemap(), critters(), compress()]
+});

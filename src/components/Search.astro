@@ -116,9 +116,9 @@
 
     async function search() {
         // Fetch links from links.json file and create array of links.
-        const response = await fetch("/links.json")
-        const jsonlinks = await response.json()
-        const links = jsonlinks["links"]
+        const response = await fetch("/links.json");
+        const jsonlinks = await response.json();
+        const links = jsonlinks["links"];
 
         var resultsList = document.getElementById("searchResults"); // Results box
         var indices = [];

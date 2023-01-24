@@ -54,7 +54,7 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--variant);
+    background: var(--bg);
     border-radius: 0.5rem;
-    border: solid 0.375rem var(--bg);
+    border: solid 0.375rem var(--variant);
 }

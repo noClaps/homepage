@@ -2,14 +2,14 @@ body {
     // Main
     --bg: #fff;
     --text: #111;
-    --link: #850;
+    --link: #fa0;
     --variant: #eee;
 
     // Accents
-    --primary-bg: #fdb;
-    --primary-text: #210;
-    --selection-bg: #630;
-    --selection-text: #fdb;
+    --primary-bg: #fa0;
+    --primary-text: #222;
+    --selection-bg: #fb6;
+    --selection-text: #222;
 }
 
 .dark {
@@ -20,10 +20,10 @@ body {
     --variant: #222;
 
     // Accents
-    --primary-bg: #630;
-    --primary-text: #fdb;
-    --selection-bg: #fdb;
-    --selection-text: #210;
+    --primary-bg: #fb6;
+    --primary-text: #222;
+    --selection-bg: #fa0;
+    --selection-text: #222;
 }
 
 ::selection {

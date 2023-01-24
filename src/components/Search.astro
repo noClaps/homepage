@@ -3,14 +3,34 @@
         oninput="search()"
         id="searchBar"
         type="search"
-        placeholder="Search for anything... (press * to see all)"
+        placeholder="Search for anything"
     />
     <ul id="searchResults"></ul>
+    <p>Hint: type * to see all results</p>
 </div>
 
 <style lang="scss">
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        95% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
     div {
         width: 100%;
+
+        p {
+            text-align: center;
+            animation: fadeIn 10s;
+        }
 
         input {
             width: 100%;

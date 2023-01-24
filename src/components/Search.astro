@@ -101,6 +101,9 @@
 <script is:inline>
     // Only load search component if JS is enabled
     document.getElementById("search").style.display = "initial";
+    // Focus search bar on load
+    document.getElementById("searchBar").focus();
+
     async function search() {
         // Fetch links from links.json file and create array of links.
         const response = await fetch("/links.json")

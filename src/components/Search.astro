@@ -1,4 +1,4 @@
-<div>
+<div id="search">
     <input
         oninput="search()"
         id="searchBar"
@@ -26,6 +26,7 @@
 
     div {
         width: 100%;
+        display: none;
 
         p {
             text-align: center;
@@ -98,6 +99,8 @@
 </style>
 
 <script is:inline>
+    // Only load search component if JS is enabled
+    document.getElementById("search").style.display = "initial";
     async function search() {
         // Fetch links from links.json file and create array of links.
         const response = await fetch("/links.json")

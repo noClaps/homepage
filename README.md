@@ -20,7 +20,7 @@ The licenses of all npm dependencies are in their respective folders in `node_mo
 
 [Astro](https://astro.build/), the static site generator used to generate this website, is licensed under the [MIT license](https://github.com/withastro/astro/blob/main/LICENSE).
 
-The favicon and icons come from [Octicons](https://primer.style/octicons) and are licensed under the [MIT license](https://github.com/noClaps/blog/blob/main/public/svg/LICENSE). The [Matrix](https://matrix.org/) icon comes from [Simple Icons](https://simpleicons.org/).
+The favicon comes from [Octicons](https://primer.style/octicons) and is licensed under the [MIT license](https://github.com/primer/octicons/blob/main/LICENSE).
 
 The [Inter](https://rsms.me/inter/) font is licensed under the [OFL-1.1 license](https://github.com/rsms/inter/blob/master/LICENSE.txt).
 

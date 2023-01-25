@@ -234,15 +234,14 @@
         }
 
         // Query search engine on pressing enter if there are no results
-        if (indices.length == 0 && query != "" && query != " ") {
-            input.addEventListener("keypress", (event) => {
-                if (event.key == "Enter") {
-                    window.location.href =
-                        "https://startpage.com/search?query=" + query;
-                }
-            });
+        // Credits to https://stackoverflow.com/a/73600122 for solution
+        if (resultsList.children.length == 0 && query != "" && query != " ") {
+            input.setAttribute(
+                "onkeyup",
+                'if (event.key == "Enter"){location.href = "https://startpage.com/search?query=" + this.value}'
+            );
         } else {
-            input.removeEventListener("keypress", this);
+            input.removeAttribute("onkeyup");
         }
     }
 </script>

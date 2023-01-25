@@ -112,8 +112,9 @@
 
 <script is:inline>
     if ("virtualKeyboard" in navigator) {
-        navigator.virtualKeyboard.overlaysContent = true
-        document.getElementById("searchResults").style.marginBlockEnd = "env(keyboard-inset-height)"
+        navigator.virtualKeyboard.overlaysContent = true;
+        document.getElementById("searchResults").style.marginBlockEnd =
+            "env(keyboard-inset-height)";
     }
 
     // Only load search component if JS is enabled
@@ -231,6 +232,16 @@
             titleblock.append(title);
 
             title.innerHTML = links[j].title;
+        }
+
+        // Query search engine on pressing enter if there are no results
+        if (indices.length == 0 && query != "" && query != " ") {
+            input.addEventListener("keypress", (event) => {
+                if (event.key == "Enter") {
+                    window.location.href =
+                        "https://startpage.com/search?query=" + query;
+                }
+            });
         }
     }
 </script>

@@ -240,6 +240,8 @@
                         "https://startpage.com/search?query=" + query;
                 }
             });
+        } else {
+            input.removeEventListener("keypress", this)
         }
     }
 </script>

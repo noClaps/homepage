@@ -111,12 +111,6 @@
 </style>
 
 <script is:inline>
-    if ("virtualKeyboard" in navigator) {
-        navigator.virtualKeyboard.overlaysContent = true;
-        document.getElementById("searchResults").style.marginBlockEnd =
-            "env(keyboard-inset-height)";
-    }
-
     // Only load search component if JS is enabled
     document.getElementById("search").style.display = "initial";
 

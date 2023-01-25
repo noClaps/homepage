@@ -213,6 +213,7 @@
             resultsList.style.display = "flex";
             resultsList.append(result);
             result.href = links[j].url;
+            result.target = "_blank";
             result.append(titleblock);
 
             // If desc and favicon are not present, their elements are excluded
@@ -241,7 +242,7 @@
                 }
             });
         } else {
-            input.removeEventListener("keypress", this)
+            input.removeEventListener("keypress", this);
         }
     }
 </script>

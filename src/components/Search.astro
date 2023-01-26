@@ -238,7 +238,7 @@
         if (resultsList.children.length == 0 && query != "" && query != " ") {
             input.setAttribute(
                 "onkeyup",
-                'if (event.key == "Enter"){location.href = "https://startpage.com/search?query=" + this.value}'
+                'if (event.key == "Enter"){window.open("https://startpage.com/search?query=" + this.value, "_blank").focus()}'
             );
         } else {
             input.removeAttribute("onkeyup");

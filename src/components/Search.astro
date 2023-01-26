@@ -152,6 +152,21 @@
             return tags;
         }
 
+        function findDesc() {
+            descs = [];
+            for (var i = 0; i < links.length; i++) {
+                if (
+                    links[i].desc &&
+                    links[i].desc.toLowerCase().indexOf(query) > -1
+                ) {
+                    descs.push(i);
+                    break;
+                }
+            }
+            descs.sort((a, b) => a - b);
+            return descs;
+        }
+
         if (query == "" || query == " ") {
             // If query is empty, clear results
             resultsList.style.display = "none";
@@ -190,7 +205,15 @@
                 if (linksDone.includes(foundTags[0])) {
                     continue;
                 } else {
-                    indices.push([foundTags[0], 99]);
+                    indices.push([foundTags[0], links.length + 1]);
+                    linksDone.push(foundTags[0]);
+                }
+            }
+
+            for (desc of findDesc()) {
+                if (!linksDone.includes(desc)) {
+                    indices.push([desc, links.length + 2]);
+                    linksDone.push(desc);
                 }
             }
         }

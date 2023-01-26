@@ -232,16 +232,5 @@
 
             title.innerHTML = links[j].title;
         }
-
-        // Query search engine on pressing enter if there are no results
-        // Credits to https://stackoverflow.com/a/73600122 for solution
-        if (resultsList.children.length == 0 && query != "" && query != " ") {
-            input.setAttribute(
-                "onkeyup",
-                'if (event.key == "Enter"){window.open("https://startpage.com/search?query=" + this.value, "_blank").focus()}'
-            );
-        } else {
-            input.removeAttribute("onkeyup");
-        }
     }
 </script>

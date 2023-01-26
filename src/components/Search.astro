@@ -7,16 +7,12 @@
         autofocus
     />
     <ul id="searchResults"></ul>
-    <p>Hint: type * to see all results</p>
+    <p id="hint"></p>
 </div>
 
 <style lang="scss">
     @keyframes fadeIn {
         0% {
-            opacity: 0;
-        }
-
-        95% {
             opacity: 0;
         }
 
@@ -31,7 +27,7 @@
 
         p {
             text-align: center;
-            animation: fadeIn 10s;
+            animation: fadeIn 0.25s;
         }
 
         input {
@@ -256,4 +252,20 @@
             title.innerHTML = links[j].title;
         }
     }
+</script>
+<script is:inline>
+    var hints = [
+        "Hint: Type * to see all results!",
+        "Try searching for my blog!",
+        "Check out my photography by searching for it above!",
+        "Wanna talk? Search for my Matrix above!",
+        "All my work is open source, check it out by searching for 'GitHub'!",
+        "If you wanna see all of my posts, try searching 'posts'!",
+        "Yearning for the ye olden days? Search for 'history'!",
+        "In a science-y mood? Try searching for 'science'!",
+        "Learn about our digital world by searching for 'tech'!",
+    ];
+
+    document.getElementById("hint").innerHTML =
+        hints[Math.floor(Math.random() * hints.length)];
 </script>

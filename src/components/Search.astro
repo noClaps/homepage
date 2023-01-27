@@ -130,6 +130,23 @@
             resultsList.removeChild(resultsList.firstChild);
         }
 
+        // Find closest instance of query and give it priority,
+        // eg. if query is "g", results like "GitHub" will have a higher position than "The Blog of Random",
+        // since "GitHub" matches the query more than "The Blog of Random"
+        function findTitles() {
+            titles = [];
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].title.toLowerCase().indexOf(query) > -1) {
+                    titles.push([
+                        i,
+                        links[i].title.toLowerCase().indexOf(query),
+                    ]);
+                }
+            }
+            titles.sort((a, b) => a[1] - b[1]);
+            return titles;
+        }
+
         // Goes through tags and finds if any value inside the tags matches the search query.
         // The tags with higher positions for each get stored in a higher index in the final tags list,
         // eg. "The Blog of Random" would have a higher position for the "blog" tag than "Messengers",
@@ -148,6 +165,11 @@
             return tags;
         }
 
+        // Goes through descriptions and finds if any description matches the search query.
+        // A more accurate search will yield a higher position in results,
+        // eg. searching for "history" will give a higher result to the description
+        // "The long and quite strange history of toilet paper" than to
+        // "The simplest hardest problem in math history" since the word "history" shows up earlier in the former.
         function findDesc() {
             descs = [];
             for (var i = 0; i < links.length; i++) {
@@ -155,101 +177,85 @@
                     links[i].desc &&
                     links[i].desc.toLowerCase().indexOf(query) > -1
                 ) {
-                    descs.push(i);
-                    break;
+                    descs.push([i, links[i].desc.toLowerCase().indexOf(query)]);
                 }
             }
-            descs.sort((a, b) => a - b);
+            descs.sort((a, b) => a[1] - b[1]);
             return descs;
         }
 
-        if (query == "" || query == " ") {
+        if (query.replace(/\s+/g, '') == "") {
             // If query is empty, clear results
             resultsList.style.display = "none";
-        } else {
+        } else if (query == "*") {
             for (var i = 0; i < links.length; i++) {
-                if (query == "*") {
-                    // If "*" is the query, show all links
-                    indices.push([i, 0]);
-                } else if (links[i].title.toLowerCase().indexOf(query) > -1) {
-                    // Find closest instance of query and give it priority,
-                    // eg. if query is "g", results like "GitHub" will have a higher position than "The Blog of Random",
-                    // since "GitHub" matches the query more than "The Blog of Random"
-                    indices.push([
-                        i,
-                        links[i].title.toLowerCase().indexOf(query),
-                    ]);
-                    indices.sort((a, b) => a[1] - b[1]);
-                } else {
-                    // If none of the results match, clear results.
-                    resultsList.style.display = "none";
+                indices.push(i);
+            }
+        } else {
+            // This block orders content appropriately such that
+            // titles have first priority, tags have second, and descriptions come last,
+            // eg. if query is "p", titles with "p" in them like "Aperturic Focus"
+            // should show up before results that have tags like "post"
+
+            for (title of findTitles()) {
+                // Skips the result if it's already been covered
+                if (!indices.includes(title[0])) {
+                    indices.push(title[0]);
                 }
             }
 
-            // This block comes after so that tags can be added after the titles,
-            // since a matching title should have priority over a matching tag,
-            // eg. if query is "p", titles with "p" in them like "Aperturic Focus"
-            // should show up before results that have tags like "post"
-            var linksDone = [];
-
-            for (index of indices) {
-                linksDone.push(index[0]);
-            }
-
-            for (foundTags of findTags()) {
-                // Skips the result if it's already been covered by the titles search above
-                if (linksDone.includes(foundTags[0])) {
-                    continue;
-                } else {
-                    indices.push([foundTags[0], links.length + 1]);
-                    linksDone.push(foundTags[0]);
+            for (tag of findTags()) {
+                if (!indices.includes(tag[0])) {
+                    indices.push(tag[0]);
                 }
             }
 
             for (desc of findDesc()) {
-                if (!linksDone.includes(desc)) {
-                    indices.push([desc, links.length + 2]);
-                    linksDone.push(desc);
+                if (!indices.includes(desc[0])) {
+                    indices.push(desc[0]);
                 }
             }
         }
 
-        // Removes duplicates, refer to https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
-        indices = [...new Set(indices)];
+        // If there are no results, hide results container.
+        // Don't run the results creation code if its not needed.
+        if (indices.length == 0) {
+            resultsList.style.display = "none";
+        } else {
+            for (index of indices) {
+                // Create an element <a href=url><div><img src=favicon><p>title</p></div><p class="desc">desc</p></a> for each result
+                var result = document.createElement("a");
+                var titleblock = document.createElement("div");
+                var title = document.createElement("p");
+                var favicon = links[index].favicon
+                    ? document.createElement("img")
+                    : null;
+                var desc = links[index].desc
+                    ? document.createElement("p")
+                    : null;
 
-        for (index of indices) {
-            const j = index[0]; // Take index in links array
+                resultsList.style.display = "flex";
+                resultsList.append(result);
+                result.href = links[index].url;
+                result.target = "_blank";
+                result.append(titleblock);
 
-            // Create an element <a href=url><div><img src=favicon><p>title</p></div><p class="desc">desc</p></a> for each result
-            var result = document.createElement("a");
-            var titleblock = document.createElement("div");
-            var title = document.createElement("p");
-            var favicon = links[j].favicon
-                ? document.createElement("img")
-                : null;
-            var desc = links[j].desc ? document.createElement("p") : null;
+                // If desc and favicon are not present, their elements are excluded
+                if (desc != null) {
+                    result.append(desc);
+                    desc.innerHTML = links[index].desc;
+                    desc.classList.add("desc");
+                }
 
-            resultsList.style.display = "flex";
-            resultsList.append(result);
-            result.href = links[j].url;
-            result.target = "_blank";
-            result.append(titleblock);
+                if (favicon != null) {
+                    titleblock.append(favicon);
+                    favicon.src = links[index].favicon;
+                }
 
-            // If desc and favicon are not present, their elements are excluded
-            if (desc != null) {
-                result.append(desc);
-                desc.innerHTML = links[j].desc;
-                desc.classList.add("desc");
+                titleblock.append(title);
+
+                title.innerHTML = links[index].title;
             }
-
-            if (favicon != null) {
-                titleblock.append(favicon);
-                favicon.src = links[j].favicon;
-            }
-
-            titleblock.append(title);
-
-            title.innerHTML = links[j].title;
         }
     }
 </script>

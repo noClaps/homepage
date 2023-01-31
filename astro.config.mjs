@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 import compress from "astro-compress";
 import critters from "astro-critters";
 import sitemap from "@astrojs/sitemap";
-import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,5 +10,5 @@ export default defineConfig({
   experimental: {
     integrations: true
   },
-  integrations: [robotsTxt(), sitemap(), critters(), compress()]
+  integrations: [sitemap(), critters(), compress()]
 });

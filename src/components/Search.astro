@@ -134,7 +134,7 @@
         // eg. if query is "g", results like "GitHub" will have a higher position than "The Blog of Random",
         // since "GitHub" matches the query more than "The Blog of Random"
         function findTitles() {
-            titles = [];
+            var titles = [];
             for (var i = 0; i < links.length; i++) {
                 if (links[i].title.toLowerCase().indexOf(query) > -1) {
                     titles.push([
@@ -152,7 +152,7 @@
         // eg. "The Blog of Random" would have a higher position for the "blog" tag than "Messengers",
         // since TBoR has a higher priority for the "blog" tag (see links.json).
         function findTags() {
-            tags = [];
+            var tags = [];
             for (i = 0; i < links.length; i++) {
                 for (j = 0; j < links[i].tags.length; j++) {
                     if (links[i].tags[j].indexOf(query) > -1) {
@@ -171,8 +171,8 @@
         // "The long and quite strange history of toilet paper" than to
         // "The simplest hardest problem in math history" since the word "history" shows up earlier in the former.
         function findDesc() {
-            descs = [];
-            for (var i = 0; i < links.length; i++) {
+            var descs = [];
+            for (i = 0; i < links.length; i++) {
                 if (
                     links[i].desc &&
                     links[i].desc.toLowerCase().indexOf(query) > -1
@@ -188,7 +188,7 @@
             // If query is empty, clear results
             resultsList.style.display = "none";
         } else if (query == "*") {
-            for (var i = 0; i < links.length; i++) {
+            for (i = 0; i < links.length; i++) {
                 indices.push(i);
             }
         } else {

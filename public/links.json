@@ -110,6 +110,16 @@
             ]
         },
         {
+            "url": "https://blog.zerolimits.dev/tech/operating-systems/",
+            "favicon": "https://blog.zerolimits.dev/icon/favicon.svg",
+            "title": "How to Make an OS",
+            "desc": "The various pros and cons of different operating systems",
+            "tags": [
+                "posts",
+                "tech"
+            ]
+        },
+        {
             "url": "https://gallery.zerolimits.dev",
             "favicon": "https://gallery.zerolimits.dev/icon/favicon.svg",
             "title": "Aperturic Focus",
@@ -149,6 +159,18 @@
                 "code",
                 "repo",
                 "noclaps"
+            ]
+        },
+        {
+            "url": "https://github.com/sponsors/noClaps",
+            "title": "Donate",
+            "desc": "Thank you for your contribution!",
+            "tags": [
+                "sponsors",
+                "contribute",
+                "donating",
+                "donation",
+                "sponsoring"
             ]
         }
     ]

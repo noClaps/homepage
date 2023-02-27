@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^1.1.0",
     "astro": "^2.0.15",
-    "astro-compress": "^1.1.33"
+    "astro-compress": "^1.1.35"
   },
   "devDependencies": {
     "sass": "^1.58.3"

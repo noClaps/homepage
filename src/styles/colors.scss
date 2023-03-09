@@ -1,4 +1,4 @@
-body {
+@mixin light-theme {
     // Main
     --bg: #fff;
     --text: #111;
@@ -12,7 +12,7 @@ body {
     --selection-text: #222;
 }
 
-.dark {
+@mixin dark-theme {
     // Main
     --bg: #111;
     --text: #eee;
@@ -24,6 +24,48 @@ body {
     --primary-text: #222;
     --selection-bg: #fa0;
     --selection-text: #222;
+}
+
+body {
+    @media (prefers-color-scheme: dark) {
+        @include dark-theme;
+
+        .moon {
+            display: none;
+        }
+
+        .sun {
+            display: inline-block;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        @include light-theme;
+
+        .sun {
+            display: none;
+        }
+    }
+
+    &.light {
+        @include light-theme;
+
+        .sun {
+            display: none;
+        }
+    }
+
+    &.dark {
+        @include dark-theme;
+
+        .moon {
+            display: none;
+        }
+
+        .sun {
+            display: inline-block;
+        }
+    }
 }
 
 ::selection {

@@ -133,17 +133,6 @@
             ]
         },
         {
-            "url": "https://recipes.zerolimits.dev",
-            "favicon": "https://recipes.zerolimits.dev/icon/favicon.svg",
-            "title": "Nummy Nummy Num",
-            "desc": "A temporary recipe manager for personal use only",
-            "tags": [
-                "food",
-                "recipes",
-                "cooking"
-            ]
-        },
-        {
             "url": "https://matrix.to/#/@turbulent:matrix.org",
             "title": "Matrix",
             "tags": [

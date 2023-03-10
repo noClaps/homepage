@@ -54,14 +54,8 @@
             border-radius: 0.75rem;
             padding: 0.5rem;
             position: absolute;
-            width: 100%;
-            max-height: 80%;
             overflow: auto;
-            z-index: 99;
-
-            @media (max-width: 426px) {
-                max-height: 40%;
-            }
+            max-height: 75vh;
 
             :global(a) {
                 display: flex;
@@ -270,7 +264,7 @@
         "Yearning for the ye olden days? Search for 'history'!",
         "In a science-y mood? Try searching for 'science'!",
         "Learn about our digital world by searching for 'tech'!",
-        "Like my stuff? Consider donating by searching for 'donate'!"
+        "Like my stuff? Consider donating by searching for 'donate'!",
     ];
 
     document.getElementById("hint")!.innerHTML =

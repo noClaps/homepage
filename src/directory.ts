@@ -86,6 +86,11 @@ export const directory: Directory = {
       name: "lsdeps",
       source: "https://github.com/noClaps/lsdeps",
     },
+    nbody: {
+      name: "n-body",
+      link: "https://nbody.zerolimits.dev",
+      source: "https://github.com/noClaps/nbody",
+    },
     news: {
       name: "News",
       link: "https://news.zerolimits.dev",

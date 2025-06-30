@@ -4,24 +4,17 @@ The ZeroLimits.dev homepage
 
 ## Build instructions
 
-1.  Clone the repository.
+Clone the repository.
 
-    ```sh
-    git clone https://github.com/noClaps/homepage.git
-    cd ZeroLimits.dev
-    ```
+```sh
+git clone https://github.com/noClaps/homepage.git
+cd ZeroLimits.dev
+```
 
-2.  Install dependencies and start the development server.
+Build the site.
 
-    ```sh
-    bun install
-    bun dev
-    ```
+```sh
+bun run build
+```
 
-3.  Build the site.
-
-    ```sh
-    bun run build
-    ```
-
-    This will place the built files in the `dist/` directory.
+This will place the built files in the `dist/` directory.

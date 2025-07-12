@@ -32,9 +32,8 @@ NAME: ls – List contents of directory
 USAGE: ls [directory] [--keys]
 ARGUMENTS:
   directory        The directory for which to list contents for. If this
-                   argument is not provided, the contents of the current
-                   directory are listed. Directory names end with a
-                   backslash (/).
+                   argument is not provided, the contents of all directories
+                   are listed. Directory names end with a backslash (/).
 OPTIONS:
   keys             Display the keys of the listed links, so that they can be
                    used with the "open" command. The keys are displayed in

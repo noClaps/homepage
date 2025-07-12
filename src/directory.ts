@@ -40,6 +40,11 @@ export const directory: Directory = {
       link: "https://camphouse.org",
       source: "https://gitlab.com/camphouse",
     },
+    nc: {
+      name: "NC",
+      link: "https://nclang.org",
+      source: "https://github.com/noClaps/nc",
+    },
     qcsim: {
       name: "QCSim",
       source: "https://github.com/qcsim/qcsim",

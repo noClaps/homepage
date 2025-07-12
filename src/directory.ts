@@ -87,7 +87,7 @@ export const directory: Directory = {
       source: "https://github.com/noClaps/lsdeps",
     },
     nbody: {
-      name: "n-body",
+      name: "N-body Simulation",
       link: "https://nbody.zerolimits.dev",
       source: "https://github.com/noClaps/nbody",
     },

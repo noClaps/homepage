@@ -1,8 +1,8 @@
-import whoami from "./bin/whoami.ts";
-import fallback from "./bin/fallback.ts";
-import help from "./bin/help.ts";
-import ls from "./bin/ls.ts";
+import { fallback } from "./bin/fallback.ts";
+import { help } from "./bin/help.ts";
+import { ls } from "./bin/ls.ts";
 import { open } from "./bin/open.ts";
+import { whoami } from "./bin/whoami.ts";
 
 const cmdHistory: string[] = [];
 let currentPos = cmdHistory.length - 1;

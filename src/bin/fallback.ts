@@ -1,6 +1,6 @@
 import { directory } from "../directory.ts";
 
-export default function fallback(command: string): string {
+export function fallback(command: string): string {
   if (directory.projects[command]) {
     const project = directory.projects[command];
     return `${project.name} - ${project.link ? `<a href="${project.link}">Link</a> - ` : ""}<a href="${project.source}">Source</a>`;

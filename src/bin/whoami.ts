@@ -1,4 +1,4 @@
-export default function whoami() {
+export function whoami() {
   return `noClaps – The most interesting boring person you've ever met.
 
 I'm a university student studying theoretical physics. I also enjoy

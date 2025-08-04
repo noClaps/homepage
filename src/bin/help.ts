@@ -1,4 +1,4 @@
-export default function help(args: string[]) {
+export function help(args: string[]) {
   if (args.length > 1) {
     return `Incorrect usage of the help command. Use "help help" to see how to use this command.`;
   }

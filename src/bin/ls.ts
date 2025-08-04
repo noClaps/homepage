@@ -1,6 +1,6 @@
 import { directory } from "../directory.ts";
 
-export default function ls(args: string[]) {
+export function ls(args: string[]) {
   if (args.length > 2)
     return `Incorrect usage of the ls command. Use "help ls" to see how to use this command.`;
 

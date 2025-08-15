@@ -45,6 +45,11 @@ export const directory: Directory = {
       link: "https://nclang.org",
       source: "https://github.com/noClaps/nc",
     },
+    pkg: {
+      name: "pkg",
+      link: "https://pkg.zerolimits.dev",
+      source: "https://github.com/noClaps/pkg",
+    },
     qcsim: {
       name: "QCSim",
       source: "https://github.com/qcsim/qcsim",

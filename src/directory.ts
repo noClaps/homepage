@@ -92,10 +92,6 @@ export const directory: Directory = {
       name: "dot",
       source: "https://github.com/noClaps/dot",
     },
-    lsdeps: {
-      name: "lsdeps",
-      source: "https://github.com/noClaps/lsdeps",
-    },
     nbody: {
       name: "N-body Simulation",
       link: "https://nbody.zerolimits.dev",
@@ -116,6 +112,10 @@ export const directory: Directory = {
     highlight: {
       name: "Highlight",
       source: "https://github.com/noClaps/highlight",
+    },
+    lsdeps: {
+      name: "lsdeps",
+      source: "https://github.com/noClaps/lsdeps",
     },
     passgen: {
       name: "passgen",

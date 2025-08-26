@@ -28,6 +28,11 @@ export const directory: Directory = {
       link: "https://gitlab.com/noClaps",
       linkName: "noClaps",
     },
+    tangled: {
+      name: "Tangled",
+      link: "https://tangled.sh/@zerolimits.dev",
+      linkName: "@zerolimits.dev",
+    },
   },
   projects: {
     gallery: {
@@ -57,7 +62,7 @@ export const directory: Directory = {
     blog: {
       name: "The Blog of Random",
       link: "https://blog.zerolimits.dev",
-      source: "https://github.com/noClaps/blog",
+      source: "https://tangled.sh/@zerolimits.dev/blog",
     },
     homepage: {
       name: "ZeroLimits.dev",
@@ -76,7 +81,8 @@ export const directory: Directory = {
     },
     catbot: {
       name: "CatBot",
-      link: "https://discord.com/oauth2/authorize?client_id=1271901024910839959",
+      link:
+        "https://discord.com/oauth2/authorize?client_id=1271901024910839959",
       source: "https://github.com/noClaps/catbot",
     },
     color: {

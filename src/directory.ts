@@ -48,7 +48,7 @@ export const directory: Directory = {
     nc: {
       name: "NC",
       link: "https://nclang.org",
-      source: "https://github.com/noClaps/nc",
+      source: "https://tangled.sh/@zerolimits.dev/nc",
     },
     pkg: {
       name: "pkg",
@@ -81,8 +81,7 @@ export const directory: Directory = {
     },
     catbot: {
       name: "CatBot",
-      link:
-        "https://discord.com/oauth2/authorize?client_id=1271901024910839959",
+      link: "https://discord.com/oauth2/authorize?client_id=1271901024910839959",
       source: "https://github.com/noClaps/catbot",
     },
     color: {
@@ -106,7 +105,7 @@ export const directory: Directory = {
     news: {
       name: "News",
       link: "https://news.zerolimits.dev",
-      source: "https://github.com/noClaps/news",
+      source: "https://tangled.sh/@zerolimits.dev/news",
     },
   },
   "archived-projects": {

@@ -84,10 +84,6 @@ export const directory: Directory = {
       link: "https://discord.com/oauth2/authorize?client_id=1271901024910839959",
       source: "https://github.com/noClaps/catbot",
     },
-    color: {
-      name: "color",
-      source: "https://github.com/noClaps/color",
-    },
     life: {
       name: "Conway's Game of Life",
       link: "https://life.zerolimits.dev",
@@ -109,6 +105,10 @@ export const directory: Directory = {
     },
   },
   "archived-projects": {
+    color: {
+      name: "color",
+      source: "https://github.com/noClaps/color",
+    },
     "discuit-docs": {
       name: "Discuit API Documentation",
       link: "https://docs.discuit.net",

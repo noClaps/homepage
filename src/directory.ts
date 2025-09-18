@@ -50,11 +50,6 @@ export const directory: Directory = {
       link: "https://nclang.org",
       source: "https://tangled.sh/@zerolimits.dev/nc",
     },
-    pkg: {
-      name: "pkg",
-      link: "https://pkg.zerolimits.dev",
-      source: "https://github.com/pkg-mngr/pkg",
-    },
     qcsim: {
       name: "QCSim",
       source: "https://github.com/qcsim/qcsim",
@@ -125,6 +120,11 @@ export const directory: Directory = {
     passgen: {
       name: "passgen",
       source: "https://github.com/noClaps/passgen",
+    },
+    pkg: {
+      name: "pkg",
+      link: "https://pkg.zerolimits.dev",
+      source: "https://github.com/pkg-mngr/pkg",
     },
     psc: {
       name: "psc",

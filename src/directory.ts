@@ -86,7 +86,7 @@ export const directory: Directory = {
     },
     dot: {
       name: "dot",
-      source: "https://github.com/noClaps/dot",
+      source: "https://tangled.sh/@zerolimits.dev/dot",
     },
     nbody: {
       name: "N-body Simulation",

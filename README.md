@@ -7,8 +7,8 @@ The ZeroLimits.dev homepage
 Clone the repository.
 
 ```sh
-git clone https://github.com/noClaps/homepage.git
-cd ZeroLimits.dev
+git clone https://tangled.sh/@zerolimits.dev/homepage
+cd homepage
 ```
 
 Build the site.

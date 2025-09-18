@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://tangled.sh/strings/@zerolimits.dev/3lyzzt7nqdm22/raw
+when:
+  - event: [push, pull_request]
+    branch: [main]
+
+engine: nixery
+
+dependencies:
+  nixpkgs:
+    - bun
+    - nodejs
+
+steps:
+  - name: Build the site
+    command: bun run build
+  - name: Deploy the site
+    command: bunx wrangler deploy

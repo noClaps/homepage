@@ -1,8 +1,8 @@
 {
   "name": "zerolimits.dev",
   "scripts": {
-    "build": "deno run -A npm:rolldown-vite build src/ --outDir ../dist --emptyOutDir && cp -r public/* dist/",
-    "dev": "deno run -A npm:rolldown-vite src/"
+    "build": "bunx rolldown-vite build src/ --outDir ../dist --emptyOutDir && cp -r public/* dist/",
+    "dev": "bunx rolldown-vite src/"
   },
   "type": "module"
 }

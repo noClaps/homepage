@@ -30,7 +30,7 @@ export const directory: Directory = {
     },
     tangled: {
       name: "Tangled",
-      link: "https://tangled.sh/@zerolimits.dev",
+      link: "https://tangled.org/@zerolimits.dev",
       linkName: "@zerolimits.dev",
     },
   },
@@ -48,7 +48,7 @@ export const directory: Directory = {
     nc: {
       name: "NC",
       link: "https://nclang.org",
-      source: "https://tangled.sh/@zerolimits.dev/nc",
+      source: "https://tangled.org/@zerolimits.dev/nc",
     },
     qcsim: {
       name: "QCSim",
@@ -57,12 +57,12 @@ export const directory: Directory = {
     blog: {
       name: "The Blog of Random",
       link: "https://blog.zerolimits.dev",
-      source: "https://tangled.sh/@zerolimits.dev/blog",
+      source: "https://tangled.org/@zerolimits.dev/blog",
     },
     homepage: {
       name: "ZeroLimits.dev",
       link: "https://zerolimits.dev",
-      source: "https://tangled.sh/@zerolimits.dev/homepage",
+      source: "https://tangled.org/@zerolimits.dev/homepage",
     },
     znak: {
       name: "Znak",
@@ -86,7 +86,7 @@ export const directory: Directory = {
     },
     dot: {
       name: "dot",
-      source: "https://tangled.sh/@zerolimits.dev/dot",
+      source: "https://tangled.org/@zerolimits.dev/dot",
     },
     nbody: {
       name: "N-body Simulation",
@@ -96,7 +96,7 @@ export const directory: Directory = {
     news: {
       name: "News",
       link: "https://news.zerolimits.dev",
-      source: "https://tangled.sh/@zerolimits.dev/news",
+      source: "https://tangled.org/@zerolimits.dev/news",
     },
   },
   "archived-projects": {

@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://tangled.sh/strings/@zerolimits.dev/3lyzzt7nqdm22/raw
+# yaml-language-server: $schema=https://tangled.org/strings/@zerolimits.dev/3lyzzt7nqdm22/raw
 when:
   - event: [push, pull_request]
     branch: [main]

@@ -72,7 +72,7 @@ export const directory: Directory = {
   "side-projects": {
     applause: {
       name: "Applause",
-      source: "https://github.com/noClaps/applause",
+      source: "https://tangled.org/@zerolimits.dev/applause",
     },
     catbot: {
       name: "CatBot",

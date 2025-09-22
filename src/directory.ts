@@ -66,7 +66,7 @@ export const directory: Directory = {
     },
     znak: {
       name: "Znak",
-      source: "https://github.com/noClaps/znak",
+      source: "https://tangled.org/@zerolimits.dev/znak",
     },
   },
   "side-projects": {

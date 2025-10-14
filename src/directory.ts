@@ -58,7 +58,7 @@ export const directory: Directory = {
         homepage: {
             name: "ZeroLimits.dev",
             link: "https://zerolimits.dev",
-            source: "https://tangled.org/@zerolimits.dev/homepage",
+            source: "https://github.com/noClaps/homepage",
         },
         znak: {
             name: "Znak",

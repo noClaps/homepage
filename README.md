@@ -7,7 +7,7 @@ The ZeroLimits.dev homepage
 Clone the repository.
 
 ```sh
-git clone https://tangled.org/@zerolimits.dev/homepage
+git clone https://github.com/noClaps/homepage
 cd homepage
 ```
 

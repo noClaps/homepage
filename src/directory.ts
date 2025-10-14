@@ -113,10 +113,6 @@ export const directory: Directory = {
             name: "lsdeps",
             source: "https://github.com/noClaps/lsdeps",
         },
-        passgen: {
-            name: "passgen",
-            source: "https://github.com/noClaps/passgen",
-        },
         pkg: {
             name: "pkg",
             link: "https://pkg.zerolimits.dev",

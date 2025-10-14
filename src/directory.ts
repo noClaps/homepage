@@ -122,17 +122,9 @@ export const directory: Directory = {
             link: "https://pkg.zerolimits.dev",
             source: "https://github.com/pkg-mngr/pkg",
         },
-        psc: {
-            name: "psc",
-            source: "https://github.com/noClaps/psc",
-        },
         qcsim: {
             name: "QCSim",
             source: "https://github.com/qcsim/qcsim",
-        },
-        random: {
-            name: "random",
-            source: "https://github.com/noClaps/random",
         },
     },
 };

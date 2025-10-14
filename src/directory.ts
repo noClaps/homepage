@@ -115,7 +115,6 @@ export const directory: Directory = {
     },
     pkg: {
       name: "pkg",
-      link: "https://pkg.zerolimits.dev",
       source: "https://github.com/pkg-mngr/pkg",
     },
     qcsim: {

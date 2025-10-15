@@ -28,11 +28,6 @@ export const directory: Directory = {
       link: "https://gitlab.com/noClaps",
       linkName: "noClaps",
     },
-    tangled: {
-      name: "Tangled",
-      link: "https://tangled.org/@zerolimits.dev",
-      linkName: "@zerolimits.dev",
-    },
   },
   projects: {
     gallery: {

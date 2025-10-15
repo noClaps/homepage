@@ -66,10 +66,6 @@ export const directory: Directory = {
     },
   },
   "side-projects": {
-    applause: {
-      name: "Applause",
-      source: "https://github.com/noClaps/applause",
-    },
     catbot: {
       name: "CatBot",
       link: "https://discord.com/oauth2/authorize?client_id=1271901024910839959",
@@ -96,6 +92,10 @@ export const directory: Directory = {
     },
   },
   "archived-projects": {
+    applause: {
+      name: "Applause",
+      source: "https://github.com/noClaps/applause",
+    },
     color: {
       name: "color",
       source: "https://github.com/noClaps/color",

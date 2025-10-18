@@ -23,22 +23,12 @@ export const directory: Directory = {
       link: "https://github.com/noClaps",
       linkName: "noClaps",
     },
-    gitlab: {
-      name: "GitLab",
-      link: "https://gitlab.com/noClaps",
-      linkName: "noClaps",
-    },
   },
   projects: {
     gallery: {
       name: "Aperturic Focus",
       link: "https://gallery.zerolimits.dev",
       source: "https://github.com/noClaps/gallery",
-    },
-    camphouse: {
-      name: "Camphouse",
-      link: "https://camphouse.org",
-      source: "https://gitlab.com/camphouse",
     },
     nc: {
       name: "NC",
@@ -94,11 +84,6 @@ export const directory: Directory = {
     color: {
       name: "color",
       source: "https://github.com/noClaps/color",
-    },
-    "discuit-docs": {
-      name: "Discuit API Documentation",
-      link: "https://docs.discuit.net",
-      source: "https://github.com/discuitnet/docs",
     },
     lsdeps: {
       name: "lsdeps",

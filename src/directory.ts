@@ -100,10 +100,6 @@ export const directory: Directory = {
       link: "https://docs.discuit.net",
       source: "https://github.com/discuitnet/docs",
     },
-    highlight: {
-      name: "Highlight",
-      source: "https://github.com/noClaps/highlight",
-    },
     lsdeps: {
       name: "lsdeps",
       source: "https://github.com/noClaps/lsdeps",

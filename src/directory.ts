@@ -61,10 +61,6 @@ export const directory: Directory = {
       link: "https://life.zerolimits.dev",
       source: "https://github.com/noClaps/game-of-life",
     },
-    dot: {
-      name: "dot",
-      source: "https://github.com/noClaps/dot",
-    },
     nbody: {
       name: "N-body Simulation",
       link: "https://nbody.zerolimits.dev",
@@ -84,6 +80,10 @@ export const directory: Directory = {
     color: {
       name: "color",
       source: "https://github.com/noClaps/color",
+    },
+    dot: {
+      name: "dot",
+      source: "https://github.com/noClaps/dot",
     },
     lsdeps: {
       name: "lsdeps",

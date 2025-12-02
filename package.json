@@ -1,8 +1,8 @@
 {
   "name": "zerolimits.dev",
   "scripts": {
-    "build": "bunx rolldown-vite build src/ --outDir ../dist --emptyOutDir && cp -r public/* dist/",
-    "dev": "bunx rolldown-vite src/"
+    "build": "pnpx rolldown-vite build src/ --outDir ../dist --emptyOutDir && cp -r public/* dist/",
+    "dev": "pnpx rolldown-vite src/"
   },
   "type": "module"
 }

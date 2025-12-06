@@ -1,8 +1,8 @@
 {
   "name": "zerolimits.dev",
   "scripts": {
-    "build": "pnpx rolldown-vite build src/ --outDir ../dist --emptyOutDir && cp -r public/* dist/",
-    "dev": "pnpx rolldown-vite src/"
+    "build": "pnpx vite build src/ --outDir ../dist --emptyOutDir && cp -r public/* dist/",
+    "dev": "pnpx vite src/"
   },
   "type": "module"
 }

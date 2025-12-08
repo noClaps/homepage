@@ -6,7 +6,6 @@ jobs:
       - uses: actions/checkout@v5
       - uses: denoland/setup-deno@v2
         with:
-          version: stable
           cache: true
       - run: deno run build
       - run: deno run -A npm:wrangler deploy

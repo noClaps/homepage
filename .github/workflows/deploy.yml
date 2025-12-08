@@ -1,0 +1,14 @@
+on: [push, workflow_dispatch]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: denoland/setup-deno@v2
+        with:
+          version: stable
+          cache: true
+      - run: deno run build
+      - run: deno run -A npm:wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

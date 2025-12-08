@@ -1,8 +1,8 @@
 {
   "name": "zerolimits.dev",
   "scripts": {
-    "build": "pnpx vite build src/ --outDir ../dist --emptyOutDir && cp -r public/* dist/",
-    "dev": "pnpx vite src/"
+    "build": "deno run -A npm:vite build src/ --outDir ../dist --emptyOutDir && cp -r public/* dist/",
+    "dev": "deno run -A npm:vite src/"
   },
   "type": "module"
 }

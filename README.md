@@ -14,7 +14,7 @@ cd homepage
 Build the site.
 
 ```sh
-bun run build
+deno run build
 ```
 
 This will place the built files in the `dist/` directory.

@@ -72,6 +72,10 @@ export const directory: Directory = {
       link: "https://news.zerolimits.dev",
       source: "https://github.com/noClaps/news",
     },
+    qcsim: {
+      name: "QCSim",
+      source: "https://github.com/noClaps/qcsim",
+    },
   },
   "archived-projects": {
     applause: {
@@ -93,10 +97,6 @@ export const directory: Directory = {
     pkg: {
       name: "pkg",
       source: "https://github.com/pkg-mngr/pkg",
-    },
-    qcsim: {
-      name: "QCSim",
-      source: "https://github.com/qcsim/qcsim",
     },
   },
 };

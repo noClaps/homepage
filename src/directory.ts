@@ -90,10 +90,6 @@ export const directory: Directory = {
       name: "dot",
       source: "https://github.com/noClaps/dot",
     },
-    lsdeps: {
-      name: "lsdeps",
-      source: "https://github.com/noClaps/lsdeps",
-    },
     pkg: {
       name: "pkg",
       source: "https://github.com/pkg-mngr/pkg",

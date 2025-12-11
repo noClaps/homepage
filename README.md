@@ -14,7 +14,7 @@ cd homepage
 Build the site.
 
 ```sh
-deno run build
+go run .
 ```
 
 This will place the built files in the `dist/` directory.

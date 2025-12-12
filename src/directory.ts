@@ -18,6 +18,11 @@ export const directory: Directory = {
       link: "mailto:contact@zerolimits.dev",
       linkName: "contact@zerolimits.dev",
     },
+    codeberg: {
+      name: "Codeberg",
+      link: "https://codeberg.org/noClaps",
+      linkName: "noClaps",
+    },
     github: {
       name: "GitHub",
       link: "https://github.com/noClaps",
@@ -80,15 +85,15 @@ export const directory: Directory = {
   "archived-projects": {
     applause: {
       name: "Applause",
-      source: "https://github.com/noClaps/applause",
+      source: "https://codeberg.org/noClaps/applause",
     },
     color: {
       name: "color",
-      source: "https://github.com/noClaps/color",
+      source: "https://codeberg.org/noClaps/color",
     },
     dot: {
       name: "dot",
-      source: "https://github.com/noClaps/dot",
+      source: "https://codeberg.org/noClaps/dot",
     },
     pkg: {
       name: "pkg",

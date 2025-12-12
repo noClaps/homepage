@@ -53,7 +53,7 @@ export const directory: Directory = {
     znak: {
       name: "Znak",
       link: "https://znak.zerolimits.dev",
-      source: "https://github.com/noClaps/znak",
+      source: "https://codeberg.org/noClaps/znak",
     },
   },
   "side-projects": {
